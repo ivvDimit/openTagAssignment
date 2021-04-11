@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "b84c4bc2-cb4b-4c22-8231-ffb14af86d76",
+		"name": "WorkingWithGraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql?query={film(filmID:1){title,speciesConnection{species {name}}}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql?query={species(speciesID:2){personConnection{people{name,birthYear,homeworld{name}eyeColor}}}}",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index",
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "{species(speciesID:2){personConnection{people{name,birthYear,homeworld{name}eyeColor}}}}"
+						}
+					]
+				},
+				"description": "Retrieve and store all species that have participated in the first movie of  Star Wars “A New Hope\".  "
+			},
+			"response": []
+		},
+		{
+			"name": "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql?query={film(filmID:1){title,speciesConnection{species {name}}}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql?query={species(speciesID:2){personConnection{people{name,birthYear,homeworld{name}eyeColor}}}}",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index",
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "{species(speciesID:2){personConnection{people{name,birthYear,homeworld{name}eyeColor}}}}"
+						}
+					]
+				},
+				"description": "Obtain “name”, “birthYear”, “homeWorld”, “eyeColor” for the person, which  is “Droid”."
+			},
+			"response": []
+		},
+		{
+			"name": "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql?query={film(filmID:1){title,speciesConnection{species {name}}}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql?query={film(filmID:1){title,characterConnection{totalCount,characters{id,name,gender}}}}",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index",
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "{film(filmID:1){title,characterConnection{totalCount,characters{id,name,gender}}}}"
+						}
+					]
+				},
+				"description": "Obtain the totalCount of all people that have participated in the movie and  the unique “id”, “name” and “gender” for each of them."
+			},
+			"response": []
+		},
+		{
+			"name": "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql?query={film(filmID:1){title,speciesConnection{species {name}}}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql?query={person(id:\"cGVvcGxlOjQ=\"){name,birthYear,homeworld {name}eyeColor,starshipConnection {starships {name}}}}",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index",
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "{person(id:\"cGVvcGxlOjQ=\"){name,birthYear,homeworld {name}eyeColor,starshipConnection {starships {name}}}}"
+						}
+					]
+				},
+				"description": "Using the information received by previous request, obtain the “name”, “birthyear”, “homeWorld”, “eyeColor”, starshipName for the person with  unique id = 4."
+			},
+			"response": []
+		}
+	]
+}
